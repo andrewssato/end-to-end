@@ -6,8 +6,14 @@ module.exports = {
       .setValue('input[type=text]', 'nightwatch')
       .waitForElementPresent('input[name=btnK]', 1000)
       .click('input[name=btnK]')
-      .pause(1000)
-      .waitForElementPresent('#appbar', 5000)
       .end();
+  },
+
+  afterEach: function(browser, done) {
+    browser.sauceEnd(browser, done);
+
+    setTimeout(function() {
+        done();
+    }, 1000);
   }
 };
