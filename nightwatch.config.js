@@ -7,4 +7,4 @@ module.exports = (function(settings) {
   }
 
   return settings;
-})(require('./nightwatch.json'));
+})(require('./nightwatch.js'));

@@ -1,4 +1,4 @@
-{
+module.exports = {
   "src_folders" : ["tests"],
   "output_folder" : "reports",
 
