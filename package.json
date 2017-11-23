@@ -8,15 +8,18 @@
     "test-dev": "npm run e2e-dev",
     "e2e": "nightwatch --config nightwatch.config.js -e chrome,firefox,safari,ie",
     "test": "ENV=production npm run e2e",
-    "test-cloud": "npm run e2e-saucelabs"
+    "test-cloud": "npm run e2e-saucelabs",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chromedriver": "^2.33.2",
+    "connect": "^3.6.5",
     "nightwatch": "^0.9.16",
     "saucelabs": "^1.4.0",
-    "selenium-server": "^3.7.1"
+    "selenium-server": "^3.7.1",
+    "serve-static": "^1.13.1"
   }
 }

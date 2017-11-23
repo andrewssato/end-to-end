@@ -1,6 +1,7 @@
 {
   "name": "end-to-end",
   "scripts": {
+	start: "node index.js"
   },
   "env": {
   },
