@@ -2,7 +2,7 @@ const seleniumPath = require('selenium-server').path;
 const chromedriverPath = require('chromedriver').path;
 
 if (process.env.ENV) {
-  console.log("ENV: " + process.env.ENV);
+  //console.log("ENV: " + process.env.ENV);
   process.env.SAUCE_USERNAME = process.env.SAUCE_USERNAME;
   process.env.SAUCE_ACCESS_KEY = process.env.SAUCE_ACCESS_KEY;
   process.env.SELENIUM_HOST = process.env.SELENIUM_HOST || "ondemand.saucelabs.com";
@@ -16,15 +16,16 @@ const SELENIUM_HOST = process.env.SELENIUM_HOST || "localhost";
 const SELENIUM_PORT = process.env.SELENIUM_PORT || 4444;
 const SELENIUM_PROCESS = process.env.SELENIUM_PROCESS || true;
 
-console.log("SAUCE_USERNAME: " + SAUCE_USERNAME);
-console.log("SAUCE_ACCESS_KEY: " + SAUCE_ACCESS_KEY);
-console.log("SELENIUM_HOST: " + SELENIUM_HOST);
-console.log("SELENIUM_PORT: " + SELENIUM_PORT);
-console.log("SELENIUM_PROCESS: " + SELENIUM_PROCESS);
+// console.log("SAUCE_USERNAME: " + SAUCE_USERNAME);
+// console.log("SAUCE_ACCESS_KEY: " + SAUCE_ACCESS_KEY);
+// console.log("SELENIUM_HOST: " + SELENIUM_HOST);
+// console.log("SELENIUM_PORT: " + SELENIUM_PORT);
+// console.log("SELENIUM_PROCESS: " + SELENIUM_PROCESS);
 
 module.exports = {
   "src_folders": ["tests"],
   "output_folder": "reports",
+  "custom_commands_path": ["custom_commands"],
 
   "selenium": {
     "start_process": SELENIUM_PROCESS,
@@ -56,9 +57,17 @@ module.exports = {
       }
     },
 
-    "chrome": {
+    "dev": {
       "desiredCapabilities": {
         "browserName": "chrome",
+      }
+    },
+
+    "chrome": {
+      "desiredCapabilities": {
+        "platform": "Windows 7",
+        "browserName": "chrome",
+        "version": "51"
       }
     },
 

@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "e2e-local": "nightwatch --config nightwatch.config.js --e chrome",
-    "e2e-saucelabs": "ENV=production nightwatch --config nightwatch.config.js -e firefox,safari,ie",
-    "test": "npm run e2e-local",
+    "e2e-dev": "nightwatch --config nightwatch.config.js --e dev",
+    "test-dev": "npm run e2e-dev",
+    "e2e": "nightwatch --config nightwatch.config.js -e chrome,firefox,safari,ie",
+    "test": "ENV=production npm run e2e",
     "test-cloud": "npm run e2e-saucelabs"
   },
   "keywords": [],
