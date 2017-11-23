@@ -1,0 +1,18 @@
+{
+  "name": "01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch --env chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^2.33.2",
+    "nightwatch": "^0.9.16",
+    "saucelabs": "^1.4.0",
+    "selenium-server": "^3.7.1"
+  }
+}
