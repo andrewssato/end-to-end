@@ -1,15 +1,18 @@
+const seleniumPath = require('selenium-server').path;
+const chromedriverPath = require('chromedriver').path;
+
 module.exports = {
   "src_folders" : ["tests"],
   "output_folder" : "reports",
 
   "selenium" : {
     "start_process" : true,
-    "server_path" : "./bin/selenium-server-standalone-3.7.1.jar",
+    "server_path" : seleniumPath,
     "log_path" : "reports",
     "host": "127.0.0.1",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "./bin/chromedriver"
+      "webdriver.chrome.driver" : chromedriverPath
     }
   },
 
